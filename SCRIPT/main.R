@@ -18,7 +18,7 @@ datos$Province.State <- as.factor(datos$Province.State)
 longlat <- c("Longitude", "Latitude")
 index <- which(colnames(datos) %in% longlat)
 datos_aux <- datos[, -index]
-
+#
 
 #3.1 Valores NA
 summary(datos_aux)
