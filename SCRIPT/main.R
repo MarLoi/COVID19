@@ -22,6 +22,50 @@ datos_aux <- datos[, -index]
 
 #3.1 Valores NA
 summary(datos_aux)
+
+#3.1 Eliminar los valores  Confirmed    
+datos_aux <- datos_aux %>% filter( !(is.na(Confirmed) & (Country.Region == 'Mexico' | Country.Region == 'Colombia'  | 
+                                          Country.Region == 'Philippines' | Country.Region == 'Brazil' |
+                                          Country.Region == 'Malaysia'| Country.Region == 'Australia')))
+
+
+
+
+
+ index <- which(is.na(datos_aux$Confirmed))
+
+datos_aux %>% filter( Confirmed == 'NA' & Country.Region == 'Mexico')
+
+
+
+datos_aux[(index & datos_aux$Country.Region == 'Colombia'),]
+
+
+index 
+
+
+
+#3.1 Valores faltantes  Recovered
+
+
+
+
+
+
+#3.1 Valores faltantes Deaths
+
+colnames(datos_aux)
+
+
+
+
+
+
+
+
+
+
+
 estados <- levels(datos_aux$Province.State)
 na_estados <- which(estados == '')
 na_estados
