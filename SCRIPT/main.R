@@ -30,7 +30,7 @@ datos_aux <- datos_aux %>% filter( !(is.na(Confirmed) & (Country.Region == 'Mexi
 
 
 
-
+#
 
  index <- which(is.na(datos_aux$Confirmed))
 
